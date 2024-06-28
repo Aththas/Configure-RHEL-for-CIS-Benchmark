@@ -100,3 +100,6 @@
 	5. Day of Week (*): This field specifies the day of the week when the command will run. The asterisk (*) means the command will run every day of the week / Day of Week (0): Run on Sunday (0 or 7 represents Sunday).
 	6. root: This field specifies the user under which the command should run. Here, root means the command will be executed with root privileges.
 	7. '/usr/sbin/aide --check': This is the command to be executed. In this case, it runs AIDE (Advanced Intrusion Detection Environment) with the --check option, which checks the integrity of the system files against a previously generated database.
+
+## Run the the evaluation again after the changes
+	
