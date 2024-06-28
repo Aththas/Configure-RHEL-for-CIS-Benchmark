@@ -28,7 +28,7 @@ $  sudo cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
 $  sudo /usr/sbin/aide --check
 
 #### 1.3 Configure AIDE to Verify the Audit Tools
-1. auditctl is checked in /etc/aide.conf
+##### 1. auditctl is checked in /etc/aide.conf
   1.1 To check (Searches for the line containing '/usr/sbin/auditctl' in /etc/aide.conf, used -i to ignore case)<br>
    $  grep -i '^.*/usr/sbin/auditctl.*$' /etc/aide.conf
 
@@ -40,12 +40,12 @@ $  sudo /usr/sbin/aide --check
 
   
 
-3. auditd is checked in /etc/aide.conf
-4. ausearch is checked in /etc/aide.conf
-5. aureport is checked in /etc/aide.conf
-6. autrace is checked in /etc/aide.conf
-7. rsyslogd is checked in /etc/aide.conf
-8. augenrules is checked in /etc/aide.conf
+##### 3. auditd is checked in /etc/aide.conf
+##### 4. ausearch is checked in /etc/aide.conf
+##### 5. aureport is checked in /etc/aide.conf
+##### 6. autrace is checked in /etc/aide.conf
+##### 7. rsyslogd is checked in /etc/aide.conf
+##### 8. augenrules is checked in /etc/aide.conf
 
 #### 1.4 Configure Periodic Execution of AIDE
 $
