@@ -18,13 +18,13 @@ $  sudo oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_cis --re
 $  sudo yum install aide
 
 #### 1.2 Build and Test AIDE Database
-1. To generate a new database (By default, the database will be written to the file /var/lib/aide/aide.db.new.gz.)
+1. To generate a new database (By default, the database will be written to the file /var/lib/aide/aide.db.new.gz.)<br>
 $  sudo /usr/sbin/aide --init
 
-2. To install the generated Database to the file /var/lib/aide/aide.db.gz
+2. To install the generated Database to the file /var/lib/aide/aide.db.gz<br>
 $  sudo cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
 
-3. Initiate a manual check (If this check produces any unexpected output, investigate)
+3. Initiate a manual check (If this check produces any unexpected output, investigate)<br>
 $  sudo /usr/sbin/aide --check
 
 #### 1.3 Configure AIDE to Verify the Audit Tools
