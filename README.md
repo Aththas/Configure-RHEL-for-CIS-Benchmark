@@ -38,7 +38,8 @@ $  sudo /usr/sbin/aide --check
   1.3.1.3 If Not Found,(Appends the new '/usr/sbin/auditctl' line with specific attributes to the end of /etc/aide.conf)<br>
    $  echo "/usr/sbin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512" >> /etc/aide.conf
 
-  
+
+	
 
 ##### 3. auditd is checked in /etc/aide.conf
 ##### 4. ausearch is checked in /etc/aide.conf
