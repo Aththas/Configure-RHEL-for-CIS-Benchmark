@@ -18,24 +18,24 @@ $  sudo oscap xccdf eval --profile xccdf_org.ssgproject.content_profile_cis --re
 $  sudo yum install aide
 
 #### 1.2 Build and Test AIDE Database
-1. To generate a new database (By default, the database will be written to the file /var/lib/aide/aide.db.new.gz.)<br>
+1.2.1 To generate a new database (By default, the database will be written to the file /var/lib/aide/aide.db.new.gz.)<br>
 $  sudo /usr/sbin/aide --init
 
-2. To install the generated Database to the file /var/lib/aide/aide.db.gz<br>
+1.2.2 To install the generated Database to the file /var/lib/aide/aide.db.gz<br>
 $  sudo cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
 
-3. Initiate a manual check (If this check produces any unexpected output, investigate)<br>
+1.2.3 Initiate a manual check (If this check produces any unexpected output, investigate)<br>
 $  sudo /usr/sbin/aide --check
 
 #### 1.3 Configure AIDE to Verify the Audit Tools
-##### 1. auditctl is checked in /etc/aide.conf
-  1.1 To check (Searches for the line containing '/usr/sbin/auditctl' in /etc/aide.conf, used -i to ignore case)<br>
+##### 1.3.1 auditctl is checked in /etc/aide.conf
+  1.3.1.1 To check (Searches for the line containing '/usr/sbin/auditctl' in /etc/aide.conf, used -i to ignore case)<br>
    $  grep -i '^.*/usr/sbin/auditctl.*$' /etc/aide.conf
 
-  1.2 If Found,(Replaces the existing '/usr/sbin/auditctl' line with a new one containing specific attributes)<br>
+  1.3.1.2 If Found,(Replaces the existing '/usr/sbin/auditctl' line with a new one containing specific attributes)<br>
    $  sed -i "s#.*/usr/sbin/auditctl.*#/usr/sbin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512#" /etc/aide.conf
 
-  1.3 If Not Found,(Appends the new '/usr/sbin/auditctl' line with specific attributes to the end of /etc/aide.conf)<br>
+  1.3.1.3 If Not Found,(Appends the new '/usr/sbin/auditctl' line with specific attributes to the end of /etc/aide.conf)<br>
    $  echo "/usr/sbin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512" >> /etc/aide.conf
 
   
