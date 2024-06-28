@@ -18,7 +18,7 @@
 	$  sudo yum install aide
 
 #### 1.2 Build and Test AIDE Database
-	1.2.1 To generate a new database (By default, the database will be written to the file /var/lib/aide/aide.db.new.gz.)<br>
+	1.2.1 To generate a new database (By default, the database will be written to the file /var/lib/aide/aide.db.new.gz.)
 	$  sudo /usr/sbin/aide --init
 
 	1.2.2 To install the generated Database to the file /var/lib/aide/aide.db.gz<br>
