@@ -18,24 +18,24 @@
 	$  sudo yum install aide
 
 #### 1.2 Build and Test AIDE Database
-	1.2.1 To generate a new database (By default, the database will be written to the file /var/lib/aide/aide.db.new.gz.)
+	To generate a new database (By default, the database will be written to the file /var/lib/aide/aide.db.new.gz.)
 	$  sudo /usr/sbin/aide --init
 
-	1.2.2 To install the generated Database to the file /var/lib/aide/aide.db.gz
+	To install the generated Database to the file /var/lib/aide/aide.db.gz
 	$  sudo cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
 
-	1.2.3 Initiate a manual check (If this check produces any unexpected output, investigate)
+	Initiate a manual check (If this check produces any unexpected output, investigate)
 	$  sudo /usr/sbin/aide --check
 
 #### 1.3 Configure AIDE to Verify the Audit Tools
 ##### 1.3.1 auditctl is checked in /etc/aide.conf
-  	1.3.1.1 To check (Searches for the line containing '/usr/sbin/auditctl' in /etc/aide.conf, used -i to ignore case)
+  	To check (Searches for the line containing '/usr/sbin/auditctl' in /etc/aide.conf, used -i to ignore case)
    	$  grep -i '^.*/usr/sbin/auditctl.*$' /etc/aide.conf
 
-  	1.3.1.2 If Found,(Replaces the existing '/usr/sbin/auditctl' line with a new one containing specific attributes)
+  	If Found,(Replaces the existing '/usr/sbin/auditctl' line with a new one containing specific attributes)
    	$  sed -i "s#.*/usr/sbin/auditctl.*#/usr/sbin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512#" /etc/aide.conf
 
-  	1.3.1.3 If Not Found,(Appends the new '/usr/sbin/auditctl' line with specific attributes to the end of /etc/aide.conf)
+  	If Not Found,(Appends the new '/usr/sbin/auditctl' line with specific attributes to the end of /etc/aide.conf)
    	$  echo "/usr/sbin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512" >> /etc/aide.conf
 
 
