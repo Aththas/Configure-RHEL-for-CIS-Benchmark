@@ -1,0 +1,5 @@
+
+# Configure-RHEL-for-CIS-Benchmark
+
+## Install OpenScap Scanner and SCAP Security Guide into the server
+	$  sudo yum install openscap-scanner scap-security-guide
