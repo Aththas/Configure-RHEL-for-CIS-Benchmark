@@ -5,18 +5,20 @@ Loopback traffic refers to network traffic that is sent from a device and routed
 ### 1. Loopback Interface:
 
 The loopback interface is a virtual network interface used by a device to send traffic to itself.
-It is typically represented by the name lo on Unix-like systems.
+It is typically represented by the name **lo** on Unix-like systems.
 
 ### 2. Loopback Address:
 
-The IPv4 loopback address is 127.0.0.1.
-The IPv6 loopback address is ::1.
+The IPv4 loopback address is **127.0.0.1**.
+The IPv6 loopback address is **::1**.
 These addresses are reserved for loopback traffic and are not routable on external networks.
 
 ### 3. Uses of Loopback Traffic:
 
 **Testing and Diagnostics**: Developers and system administrators use loopback addresses to test network applications and configurations locally on the device.
+
 **Local Inter-Process Communication (IPC)**: Applications running on the same device can communicate with each other using loopback addresses.
+
 **Security**: Loopback interfaces can be used to securely run services that should only be accessible from the local device.
 
 ## How Loopback Traffic Works:
@@ -28,6 +30,7 @@ This means the data is processed as if it were received from an external network
 ### 1. Testing a Web Server Locally:
 
 You can run a web server on your device and access it using http://127.0.0.1 or http://localhost.
+
 This allows you to test the web server configuration and functionality without exposing it to the external network.
 
 ### 2. Database Connections:
