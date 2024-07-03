@@ -5,13 +5,13 @@ Reverse Path Filtering (RPF) is a security feature used in networking to ensure 
 Imagine you're a security guard at a gate, and you want to make sure that every person entering the gate has a legitimate reason to be there. You check not only their destination but also where they came from to ensure they’re not coming from a suspicious or restricted area. Similarly, reverse path filtering checks if an incoming packet is coming from a valid path.
 
 ## Steps Involved in Reverse Path Filtering:
-### Check the Source Address:
+### 1. Check the Source Address:
 When a packet arrives at an interface, the device checks the source IP address of the packet.
 
-### Verify the Route:
+### 2. Verify the Route:
 The device then looks up its routing table to verify if there is a valid return path to the source IP address.
 
-### Decide the Action:
+### 3. Decide the Action:
 If there is a valid path, the packet is considered legitimate and is forwarded.
 
 If there is no valid path, the packet is considered suspicious and is discarded.
