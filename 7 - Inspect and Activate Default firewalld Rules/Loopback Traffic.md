@@ -37,3 +37,10 @@ This allows you to test the web server configuration and functionality without e
 
 A local application can connect to a database server running on the same device using the loopback address.
 For example, a local MySQL server can be accessed using 127.0.0.1.
+
+## Description:
+To configure firewalld to restrict loopback traffic to the lo interface (the loopback interface):
+
+1. Assign the lo interface to the trusted zone: This step ensures that loopback traffic is trusted.
+
+2. Restrict loopback traffic to the lo interface: This is done as an anti-spoofing measure to ensure that loopback traffic is only seen on the loopback interface and not on other interfaces.
