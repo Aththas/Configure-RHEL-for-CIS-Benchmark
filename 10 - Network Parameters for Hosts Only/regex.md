@@ -42,3 +42,15 @@ efgabc: Matches because abc is at the end of the line.
 **-m 1**: Stop reading after the first match.
 
 **-i**: Case-insensitive search.
+
+**\\>**: Ensures the match ends at a word boundary, making sure it matches the exact parameter and not a longer name starting with the same string.
+
+Matches:
+
+net.ipv4.conf.all.send_redirects = 1
+
+net.ipv4.conf.all.send_redirects 0
+
+Does Not Match:
+
+net.ipv4.conf.all.send_redirects_something_else = 1
