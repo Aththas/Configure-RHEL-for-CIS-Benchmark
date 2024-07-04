@@ -21,3 +21,12 @@
 7. .* : Matches 0 or more of any character (allowing for anything after the target string).
 
 8. **$** : Asserts the position at the end of the line.
+
+**$** explanation:
+**abc$**
+
+abc: Matches because abc is at the end of the line.
+
+abcd: Does not match because abc is followed by d, so it's not at the end of the line.
+
+efgabc: Matches because abc is at the end of the line.
