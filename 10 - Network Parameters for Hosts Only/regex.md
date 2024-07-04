@@ -1,4 +1,4 @@
-### The cmd:
+# The cmd:
     $ sudo grep -P '^(?!#).*[\s]*net.ipv4.conf.all.send_redirects.*$' /etc/sysctl.d/*.conf
 
 ### Explanation:
@@ -30,3 +30,15 @@ abc: Matches because abc is at the end of the line.
 abcd: Does not match because abc is followed by d, so it's not at the end of the line.
 
 efgabc: Matches because abc is at the end of the line.
+
+
+
+
+# cmd:
+    $ sudo grep -q -m 1 -i "^net.ipv4.conf.all.send_redirects\\>" /etc/sysctl.conf
+
+**-q**: Quiet mode, suppress output.
+
+**-m 1**: Stop reading after the first match.
+
+**-i**: Case-insensitive search.
