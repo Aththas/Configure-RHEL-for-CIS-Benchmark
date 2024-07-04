@@ -54,3 +54,8 @@ net.ipv4.conf.all.send_redirects 0
 Does Not Match:
 
 net.ipv4.conf.all.send_redirects_something_else = 1
+
+# cmd:
+    $ sudo sysctl --system
+
+**--system**: Apply all the settings from the sysctl configuration files
