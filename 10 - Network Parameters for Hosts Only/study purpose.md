@@ -12,7 +12,7 @@
 
 3. **.** : Matches any character except newline.
 
-4. * : Matches 0 or more of the preceding character (in this case, any character).
+4. *: Matches 0 or more of the preceding character (in this case, any character).
 
 5. **[\s]*** : Matches 0 or more whitespace characters (spaces, tabs, etc.).
 
