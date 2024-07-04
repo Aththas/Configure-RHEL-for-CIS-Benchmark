@@ -1,0 +1,5 @@
+# To disbale dccp
+    $ echo "install rds /bin/false" | sudo tee -a /etc/modprobe.d/rds.conf
+
+# To blacklist
+    $ echo "blacklist rds" | sudo tee -a /etc/modprobe.d/rds.conf
