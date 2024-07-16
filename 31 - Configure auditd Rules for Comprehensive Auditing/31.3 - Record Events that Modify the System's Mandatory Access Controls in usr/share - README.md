@@ -1,0 +1,13 @@
+## 1. Check if the file /etc/audit/rules.d/MAC-policy.rules exists
+    $ sudo find /etc/audit/rules.d/MAC-policy.rules
+    
+## 2. If not found, Create the file
+    $ sudo touch /etc/audit/rules.d/MAC-policy.rules
+
+## 3. Assign default permissions to the file /etc/audit/rules.d/MAC-policy.rules
+    $ sudo chmod 0640 /etc/audit/rules.d/MAC-policy.rules
+
+## 4. Add following lines to the created file /etc/audit/rules.d/MAC-policy.rules
+    $ echo "-w /usr/share/selinux/ -p wa -k MAC-policy" | sudo tee -a /etc/audit/rules.d/MAC-policy.rules
+
+
